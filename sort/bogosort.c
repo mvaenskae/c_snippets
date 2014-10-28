@@ -38,7 +38,7 @@ int main(void)
     //int arr[10] = {2, 1, 3, 4, 5, 6, 7, 8, 9, 10};
     int arr[8] = {2, 1, 3, 4, 5, 7, 9, 10};
     size_t size = sizeof(arr)/sizeof(arr[0]);
-    int_fast8_t err = bogosort(arr, size);
+    int err = bogosort(arr, size);
     if (err) {
         printf("Encountered error!\n");
         return err;
