@@ -17,7 +17,7 @@ int bogosort(int *arr, size_t size)
                     return 1;
                 }
                 size_t rand;
-                ssize_t err = read(rng, (size_t *) &rand, 1);
+                ssize_t err = read(rng, (size_t *) &rand, sizeof(rand));
                 if (err < 0) {
                     return 1;
                 }
