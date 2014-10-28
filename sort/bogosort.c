@@ -8,9 +8,10 @@ int bogosort(int *arr, size_t size);
 
 int bogosort(int *arr, size_t size)
 {
-    for (size_t j = 0; j < (size - 1); ++j)
-        if (arr[j] > arr[j+1]) {
-            for (size_t i = 0; i < size; ++i) {
+    size_t i;
+    for (i = 0; i < (size - 1); ) {
+        if (arr[i] > arr[i+1]) {
+            for (i = (size - 1); i > 0; --i) {
                 int rng = open("/dev/urandom", O_RDONLY);
                 if (rng == -1) {
                     return 1;
@@ -28,8 +29,11 @@ int bogosort(int *arr, size_t size)
                     arr[i] ^= arr[rand];
                 }
             }
-            j = -1;
+        } else {
+            ++i;
         }
+    }
+        
     return 0;
 }
 
