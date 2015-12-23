@@ -1,5 +1,9 @@
 #include<stdio.h>
 
+/*
+ ** printf formats: http://www.cplusplus.com/reference/cstdio/printf/
+ */
+
 int main(int argc, char *argv[])
 {
     int distance = 100;
