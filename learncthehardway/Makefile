@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -g
+CFLAGS=-Wall -Wextra -std=c11 -g
 
 all:
 	make ex01
